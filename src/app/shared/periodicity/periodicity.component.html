@@ -1,0 +1,19 @@
+<div class="d-flex" [formGroup]="intervalForm">
+  <mat-form-field class="me-2 flex-shrink-0 flex-grow-0">
+    <mat-label>Interval</mat-label>
+    <mat-select formControlName="intervalId">
+      <mat-option *ngFor="let interval of intervals" [value]="interval.value">
+        {{ interval.text }}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <mat-form-field class="flex-shrink-1 flex-grow-1">
+    <mat-label>Interval Specification</mat-label>
+    <mat-select formControlName="intervalSpecification">
+      <mat-option *ngFor="let day of days" [value]="days.indexOf(day)+1">
+        {{ day }}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+</div>

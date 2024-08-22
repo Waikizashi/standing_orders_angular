@@ -1,0 +1,30 @@
+@use '@angular/material' as mat;
+@import '/src/themes/main-theme.scss';
+
+@include mat.core();
+@include mat.typography-hierarchy($my-typography);
+@include mat.all-component-themes($my-theme);
+
+
+@import '~bootstrap/dist/css/bootstrap-grid.min.css';
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+app-root{
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.service-snackbar button{
+  color: crimson !important;
+}

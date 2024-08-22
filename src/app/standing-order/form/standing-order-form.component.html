@@ -1,0 +1,66 @@
+<div class="d-flex flex-row justify-content-center">
+  <div class=" container wrapper p-0 m-4 mat-elevation-z4">
+    <form class="flex-column" [formGroup]="standingOrderForm" (ngSubmit)="onSubmit()">
+      <mat-toolbar class="justify-content-start" color="primary">
+        Standing order
+      </mat-toolbar>
+      <div class=" mx-2 mt-3 mb-1">
+        <mat-form-field>
+          <mat-label>Name</mat-label>
+          <input matInput placeholder="Name" formControlName="name">
+        </mat-form-field>
+
+        <mat-form-field>
+          <mat-label>Amount</mat-label>
+          <input matInput type="number" placeholder="Amount" formControlName="amount">
+        </mat-form-field>
+
+        <mat-form-field>
+          <mat-label>Account Number</mat-label>
+          <input matInput placeholder="Account Number" formControlName="accountNumber">
+        </mat-form-field>
+
+        <mat-form-field>
+          <mat-label>Variable Symbol</mat-label>
+          <input matInput placeholder="Variable Symbol" formControlName="variableSymbol">
+        </mat-form-field>
+
+        <mat-form-field>
+          <mat-label>Specific Symbol</mat-label>
+          <input matInput placeholder="Specific Symbol" formControlName="specificSymbol">
+        </mat-form-field>
+
+        <div class="d-flex align-items-baseline">
+          <mat-form-field class="flex-shrink-1 flex-grow-1">
+            <mat-label>Constant Symbol</mat-label>
+            <input matInput placeholder="Constant Symbol" formControlName="constantSymbol">
+          </mat-form-field>
+          <button *ngIf="isNotShowMode" (click)="openConstantSymbolDialog()" class="flex-shrink-0 flex-grow-2 ms-2"
+            color="primary" type="button" mat-flat-button>
+            Constant Symbol</button>
+        </div>
+
+        <mat-form-field>
+          <mat-label>Note</mat-label>
+          <textarea matInput placeholder="Note" formControlName="note"></textarea>
+        </mat-form-field>
+
+        <app-periodicity formControlName="interval"></app-periodicity>
+
+        <mat-form-field>
+          <mat-label>Valid From</mat-label>
+          <input matInput [min]="tomorow" [matDatepicker]="validFrom" formControlName="validFrom"
+            placeholder="MM/DD/YYYY">
+          <mat-datepicker-toggle matSuffix [for]="validFrom"></mat-datepicker-toggle>
+          <mat-datepicker #validFrom></mat-datepicker>
+        </mat-form-field>
+      </div>
+      <mat-toolbar class="justify-content-end m-0" color="primary">
+        <button type="submit" *ngIf="isNotShowMode" class="mx-2" color="accent" mat-raised-button>
+          SAVE</button>
+        <a class="mx-2" color="warn" mat-raised-button routerLink="/standing-orders">
+          CLOSE</a>
+      </mat-toolbar>
+    </form>
+  </div>
+</div>

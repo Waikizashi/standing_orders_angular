@@ -1,0 +1,26 @@
+[
+  {
+    "standingOrderId": 1,
+    "amount": 1000,
+    "name": "Rent",
+    "accountNumber": "NL9174658294756294756328",
+    "interval": "Mesacne",
+    "nextRealizationDate": "2023-06-01T00:00:00"
+  },
+  {
+    "standingOrderId": 2,
+    "amount": 200,
+    "name": "Internet",
+    "accountNumber": "NL9174658294756294756328",
+    "interval": "Mesacne",
+    "nextRealizationDate": "2023-02-01T00:00:00"
+  },
+  {
+    "standingOrderId": 3,
+    "amount": 600,
+    "name": "Bch",
+    "accountNumber": "NL9174658294756294756328",
+    "interval": "Denne",
+    "nextRealizationDate": "2023-07-01T00:00:00"
+  }
+]

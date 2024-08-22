@@ -1,0 +1,54 @@
+$border-color: #d0d0d0;
+$bg-gray: #1565C0;
+$bg-light: #f0f0f0;
+
+.interval{
+  height: fit-content;
+  min-width: fit-content;
+  background-color: $bg-gray;
+  color: $bg-light !important;
+  border-radius: 5px;
+  font-weight: 500;
+}
+
+a{
+  text-decoration: underline;
+  cursor: pointer;
+  color: #1f1f1f;
+}
+
+table {
+  outline: 1px solid $border-color;
+  outline-offset: -24px;
+}
+
+tr:nth-child(2n + 1) {
+  background-color: $bg-light;
+}
+tr:nth-child(2n + 1):hover {
+  background-color: $bg-light;
+}
+
+td:nth-child(2) {
+  border-right: 1px solid $border-color;
+  border-left: 1px solid $border-color;
+}
+
+.mat-column-date, .mat-column-amount{
+  text-align: center;
+}
+
+.btns{
+  visibility: hidden;
+}
+
+.mat-mdc-row:hover .btns{
+  visibility: visible;
+}
+
+.mat-tool.bar button{
+  color: white;
+}
+.btn-new{
+  text-decoration: none;
+}

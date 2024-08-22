@@ -1,0 +1,25 @@
+<div>
+  <div mat-dialog-title class="pb-0 mt-2 d-flex d-flex justify-content-center">
+    <h1 class="my-0">Enter PIN</h1>
+  </div>
+  <div mat-dialog-content class="py-0 mx-auto">
+    <h3 class="d-flex flex-row justify-content-around">
+      <div class="d-flex flex-row">Row:
+        <mat-spinner class="ms-1" diameter=20 *ngIf="loadSpinner"></mat-spinner>
+        <strong class="ms-1" *ngIf="!loadSpinner">{{coords.row}}</strong>
+      </div>
+      <div class="d-flex flex-row">Column:
+        <mat-spinner class="ms-1" diameter=20 *ngIf="loadSpinner"></mat-spinner>
+        <strong class="ms-1" *ngIf="!loadSpinner">{{coords.col}}</strong>
+      </div>
+    </h3>
+    <mat-form-field>
+      <mat-label>PIN:</mat-label>
+      <input [formControl]="pin" matInput>
+    </mat-form-field>
+  </div>
+  <div mat-dialog-actions class="d-flex justify-content-between px-4">
+    <button mat-raised-button color="warn" (click)="onCancel()">Cancel</button>
+    <button mat-raised-button type="button" (click)="onSubmit()" color="accent">Ok</button>
+  </div>
+</div>

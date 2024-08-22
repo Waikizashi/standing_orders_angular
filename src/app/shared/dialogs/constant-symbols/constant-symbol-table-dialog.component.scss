@@ -1,0 +1,20 @@
+$border-color: #d0d0d0;
+$bg-gray: #1565C0;
+$bg-light: #f0f0f0;
+
+.mat-mdc-table {
+  background-color: white;
+  outline: 1px solid $border-color;
+  outline-offset: -24px;
+}
+
+td:nth-child(1),th:nth-child(1){
+  border-right: 1px solid $border-color;
+}
+
+.mat-mdc-row {
+  cursor: pointer;
+}
+.mat-mdc-row:hover {
+  background-color: $bg-light !important;
+}
